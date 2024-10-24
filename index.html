@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funko Diy</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+        
+        <div class="side-menu">
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <div class="menu-options">
+                <ul>
+                    <li>
+                        <a href="index.html">Página inicial</a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li>
+                        <a href="informacoes.html">Informações</a>
+                    </li>
+                    <li>
+                        <a href="pagamento.html">Formas de pagamento</a>
+                    </li>
+                    <li>
+                        <a href="envio.html">Formas de envio</a>
+                    </li>
+                    <li>
+                        <a href="pedido.html">Quero fazer um pedido</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <header>
+            <div class="logo">
+                <img src="./logo.svg"> 
+            </div>
+            <div class="center">
+                <img src="./fotos.svg"> 
+            </div>
+            <h1>Funko Diy</h1>
+            <h3>Funkos personalizados</h3>
+        </header>
+    
+        <main>
+            <section>
+                <h3><span class="highlight-line"></span>O que é?</h3>
+                <p>Um funko personalizado é uma figura feita à mão que representa um personagem específico, seja de filmes, séries, jogos ou até mesmo uma pessoa real. Diferente dos funkos comerciais, os personalizados são criados de acordo com as preferências e especificações do cliente, permitindo detalhes únicos. Essa personalização torna cada peça exclusiva, refletindo a individualidade e os interesses de quem a encomendou.</p>
+            </section>
+            <section>
+                <h3><span class="highlight-line"></span>Do que é feito?</h3>
+                <p>Os funkos personalizados são feitos com porcelana fria, um material leve e moldável que permite criar figuras únicas e detalhadas. Esse processo artesanal envolve modelagem cuidadosa, secagem e até mesmo pintura. Cada peça é feita à mão, refletindo a personalidade e os gostos de quem a encomendou.</p>
+            </section>
+            <section>
+                <h3><span class="highlight-line"></span>Quem sou eu?</h3>
+                <p>Me chamo Rafaela e tenho 21 anos! A ideia de criar funkos personalizados começou em 2021, durante a pandemia, e tem se estendido até hoje. Através do meu trabalho, busco transformar ideias em funkos, refletindo a individualidade de cada cliente. Para mim, cada peça é uma forma de contar uma história, e fico feliz em trazer à vida os personagens e momentos que são especiais para você.</p>
+            </section>
+        </main>
+    
+        <footer>
+            <a href="https://www.instagram.com/funkodiy/" target="_blank" rel="noopener noreferrer">
+                <img src="./instagram.svg"> 
+            </a>
+            <a href="https://wa.me/5541987304069" target="_blank" rel="noopener noreferrer">
+                <img src="./whatsapp.svg">
+            </a>
+            <a href="https://shopee.com.br/funkodiy" target="_blank" rel="noopener noreferrer">
+                <img src="./shopee.svg">
+            </a>
+        </footer>
+        
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.side-menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>

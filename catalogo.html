@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .produto {
+            width: 48%;
+            background-color: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .produto img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .produto h3 {
+            font-size: 20px;
+            background-color: white;
+            color: #262626;
+            position: relative;
+            z-index: 1; 
+            margin-top: 5px; 
+            margin-bottom: 10px;
+        }
+
+        .produto p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .produto a {
+            display: inline-block;
+            background-color: #ff82d7;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .produto a:hover {
+            background-color: #b6b6b6;
+        }
+
+        .produto:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .produto {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+        
+        <div class="side-menu">
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <div class="menu-options">
+                <ul>
+                    <li>
+                        <a href="index.html">Página inicial</a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li>
+                        <a href="informacoes.html">Informações</a>
+                    </li>
+                    <li>
+                        <a href="pagamento.html">Formas de pagamento</a>
+                    </li>
+                    <li>
+                        <a href="envio.html">Formas de envio</a>
+                    </li>
+                    <li>
+                        <a href="pedido.html">Quero fazer um pedido</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <header>
+            <div class="logo">
+                <img src="./logo.svg"> 
+            </div>
+
+            <main>
+                <h1>Catálogo de Produtos</h1>
+        
+                <div class="catalogo">
+                    <div class="produto">
+                        <img src="fu.svg">
+                        <h3>Funko personalizado com caixa</h3>
+                        <p>R$150,00 or $35 USD</p>
+                        <a href="https://wa.me/5541987304069?text=Olá! Gostaria de saber mais sobre o Funko personalizado com caixa." target="_blank">
+                            Quero saber mais!
+                        </a>
+                    </div>
+        
+                    <div class="produto">
+                        <img src="fp.svg">
+                        <h3>Funko personalizado com caixa e pet</h3>
+                        <p>R$180,00 or $40 USD</p>
+                        <a href="https://wa.me/5541987304069?text=Olá! Gostaria de saber mais sobre o Funko personalizado com caixa e pet." target="_blank">
+                            Quero saber mais!
+                        </a>
+                    </div>
+        
+                    <div class="produto">
+                        <img src="fc.svg">
+                        <h3>2 funkos personalizados com caixa dupla</h3>
+                        <p>R$280 or $60 USD</p>
+                        <a href="https://wa.me/5541987304069?text=Olá! Gostaria de saber mais sobre os 2 funkos personalizados com caixa dupla." target="_blank">
+                            Quero saber mais!
+                        </a>
+                    </div>
+
+                    <div class="produto">
+                        <img src="sp.svg">
+                        <h3>Adicional de 1 pet personalizado</h3>
+                        <p>R$40,00 or $10 USD</p>
+                        <a href="https://wa.me/5541987304069?text=Olá! Gostaria de saber mais sobre o adicional de 1 pet personalizado." target="_blank">
+                            Quero saber mais!
+                        </a>
+                    </div>
+        
+                    <div class="produto">
+                        <img src="pet.svg">
+                        <h3>Pet personalizado com mini caixa</h3>
+                        <p>R$50,00 or $12 USD</p>
+                        <a href="https://wa.me/5541987304069?text=Olá! Gostaria de saber mais sobre o Pet personalizado com mini caixa." target="_blank">
+                            Quero saber mais!
+                        </a>
+                    </div>
+                </div>
+        
+            </main>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.side-menu');
+        menu.classList.toggle('show');
+        }
+</script>
+        
+</body>
+</html>

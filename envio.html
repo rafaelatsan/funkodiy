@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funko Diy</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+        
+        <div class="side-menu">
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <div class="menu-options">
+                <ul>
+                    <li>
+                        <a href="index.html">Página inicial</a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li>
+                        <a href="informacoes.html">Informações</a>
+                    </li>
+                    <li>
+                        <a href="pagamento.html">Formas de pagamento</a>
+                    </li>
+                    <li>
+                        <a href="envio.html">Formas de envio</a>
+                    </li>
+                    <li>
+                        <a href="pedido.html">Quero fazer um pedido</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <header>
+            <div class="logo">
+                <img src="./logo.svg"> 
+            </div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.side-menu');
+        menu.classList.toggle('show');
+    }
+</script>
+                    
+</body>
+</html>           
