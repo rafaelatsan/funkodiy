@@ -18,6 +18,51 @@ body {
     margin-top: 13px; 
 } 
 
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.box {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    border-radius: 8px; 
+    margin: 20px auto; 
+    max-width: 300px; 
+}
+
+.envio p {
+    margin-bottom: 3px; 
+    text-align: center;
+    margin-top: 10px;
+}
+
+.envio img {
+    width: 55%;
+    max-width: 300px; 
+    height: auto; 
+    margin-top: none; 
+}
+
+.botao {
+    display: inline-block;
+    background-color: #ff8086; 
+    color: white; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    text-decoration: none;
+    margin-top: 20px; 
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #ffa5aa;
+}
+
 .container { 
     max-width: 100%; 
     box-sizing: border-box; 

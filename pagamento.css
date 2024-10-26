@@ -18,6 +18,75 @@ body {
     margin-top: 13px; 
 } 
 
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin: none; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.opcao {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 15px;
+    padding: 5px; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    width: 80%; 
+    max-width: 600px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.opcao img {
+    width: 100px; 
+    height: auto; 
+    margin-bottom: none; 
+}
+
+.opcao p {
+    margin: 10px; 
+    text-align: center; 
+}
+
+.pagamento span {
+    display: block; 
+    margin-top: none; 
+}
+
+span {
+    display: block;
+    margin: 5px 0;
+    line-height: 0; 
+}
+
+@media (min-width: 768px) {
+    .pagamento {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pagamento .opcao {
+        margin: 0 10px; 
+    }
+}
+
 .container { 
     max-width: 100%; 
     box-sizing: border-box; 
