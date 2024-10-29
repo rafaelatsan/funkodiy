@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funko Diy</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="pedido.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                         <a href="catalogo.html">Catálogo</a>
                     </li>
                     <li>
-                        <a href="informacoes.html">Informações</a>
+                        <a href="informacoes.html">Informações necessárias</a>
                     </li>
                     <li>
                         <a href="pagamento.html">Formas de pagamento</a>
@@ -37,23 +38,106 @@
                         <a href="envio.html">Formas de envio</a>
                     </li>
                     <li>
-                        <a href="pedido.html">Quero fazer um pedido</a>
+                        <a href="dados.html">Dados de envio</a>
+                    </li>
+                    <li>
+                        <a href="pedido.html">Meu pedido</a>
                     </li>
                 </ul>
             </div>
         </div>
-    
+
         <header>
             <div class="logo">
                 <img src="./assets/logo.svg"> 
             </div>
+        </header>
 
-<script>
-    function toggleMenu() {
-        const menu = document.querySelector('.side-menu');
-        menu.classList.toggle('show');
-                    }
-    </script>
-                    
-</body>
-</html>
+        <h1>Personalização do Funko</h1>
+        <main class="pedido-form">
+           
+        
+            <fieldset>
+                <legend>Funko</legend>
+                
+                <label for="funko-name">Nome:</label>
+                <input type="text" id="funko-name" name="funko-name" placeholder="Nome do Funko">
+                
+                <label for="skin-color">Cor da pele:</label>
+                <div class="color-swatch">
+                    <img src="assets/skin-color-options.jpg" alt="Opções de cor da pele" style="width: 100px;">
+                    <!-- Aqui você pode colocar as opções de cores em imagens -->
+                </div>
+        
+                <label for="eye-color">Cor do olho:</label>
+                <input type="text" id="eye-color" name="eye-color" placeholder="Cor dos olhos">
+                
+                <label for="hair-color">Cor do cabelo:</label>
+                <input type="text" id="hair-color" name="hair-color" placeholder="Cor do cabelo">
+                
+                <label for="hairstyle">Penteado:</label>
+                <input type="text" id="hairstyle" name="hairstyle" placeholder="Penteado desejado">
+                
+                <label for="clothes">Roupa e sua respectiva cor:</label>
+                <input type="text" id="clothes" name="clothes" placeholder="Roupa e cor">
+                
+                <label for="shoes">Sapato:</label>
+                <input type="text" id="shoes" name="shoes" placeholder="Sapato desejado">
+                
+                <label for="accessories">Acessórios:</label>
+                <input type="text" id="accessories" name="accessories" placeholder="Acessórios desejados">
+                
+                <label for="reference-photos-funko">Fotos de referência:</label>
+                <input type="file" id="reference-photos-funko" name="reference-photos-funko[]" multiple accept="image/*">
+                <p>Envie até 15 imagens.</p>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Caixa</legend>
+                
+                <label for="box-name">Nome:</label>
+                <input type="text" id="box-name" name="box-name" placeholder="Nome da caixa">
+                
+                <label for="box-number">Número:</label>
+                <input type="text" id="box-number" name="box-number" placeholder="Número da caixa">
+                
+                <label for="box-phrase">Frase:</label>
+                <input type="text" id="box-phrase" name="box-phrase" placeholder="Frase para a caixa">
+                
+                <label for="box-color">Cor da caixa:</label>
+                <input type="color" id="box-color" name="box-color" value="#ffffff">
+                
+                <label for="box-images">Imagem, logo ou QR-code:</label>
+                <input type="file" id="box-images" name="box-images[]" multiple accept="image/*">
+                <p>Envie até 5 imagens.</p>
+        
+                <label for="box-color-detail">Cor:</label>
+                <input type="text" id="box-color-detail" name="box-color-detail" placeholder="Cor adicional">
+        
+                <label for="toys">Brinquedos:</label>
+                <input type="text" id="toys" name="toys" placeholder="Brinquedos desejados">
+                
+                <label for="ribbons">Lacinhos, gravatas ou bandanas:</label>
+                <input type="text" id="ribbons" name="ribbons" placeholder="Lacinhos, gravatas ou bandanas">
+                
+                <label for="clothes-or-collar">Roupinha ou coleira:</label>
+                <input type="text" id="clothes-or-collar" name="clothes-or-collar" placeholder="Roupinha ou coleira">
+                
+                <label for="reference-photos-box">Fotos de referência:</label>
+                <input type="file" id="reference-photos-box" name="reference-photos-box[]" multiple accept="image/*">
+                <p>Envie até 5 imagens.</p>
+            </fieldset>
+        
+            <button type="submit" class="submit-btn">Enviar Pedido</button>
+        </main>
+        
+
+        <script>
+            function toggleMenu() {
+                const menu = document.querySelector('.side-menu');
+                menu.classList.toggle('show');
+            }
+        </script>
+
+    </body>
+    </html>

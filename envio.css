@@ -18,6 +18,14 @@ body {
     margin-top: 13px; 
 } 
 
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: -10px; 
+    padding-top: 0;
+}
+
 .produto img {
     width: 100%;
     height: auto;

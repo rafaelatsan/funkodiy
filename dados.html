@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funko Diy</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="dados.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+        
+        <div class="side-menu">
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <div class="menu-options">
+                <ul>
+                    <li>
+                        <a href="index.html">Página inicial</a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li>
+                        <a href="informacoes.html">Informações necessárias</a>
+                    </li>
+                    <li>
+                        <a href="pagamento.html">Formas de pagamento</a>
+                    </li>
+                    <li>
+                        <a href="envio.html">Formas de envio</a>
+                    </li>
+                    <li>
+                        <a href="dados.html">Dados de envio</a>
+                    </li>
+                    <li>
+                        <a href="pedido.html">Meu pedido</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <header>
+            <div class="logo">
+                <img src="./assets/logo.svg"> 
+            </div>
+        </header>
+
+        <main>
+            <h1>Meus dados</h1>
+        
+            <form action="https://wa.me/5541998996999" method="get" target="_blank" class="pedido-form">
+                
+                <fieldset>
+                    <legend>Informações pessoais</legend>
+        
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder= "Nome" required>
+        
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder= "(xx) xxxxx-xxxx" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder= "abc@def.com" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Dados para envio do pedido</legend>
+                    
+                    <label for="recipient">Destinatário:</label>
+                    <input type="text" id="recipient" name="recipient" placeholder="Nome do destinatário" required>
+
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required onblur="fetchAddress()">
+                    
+                    <label for="address">Rua:</label>
+                    <input type="text" id="address" name="address" placeholder="Digite a rua" required>
+                    
+                    <label for="number">Número:</label>
+                    <input type="text" id="number" name="number" placeholder="Número da residência" required>
+                    
+                    <label for="neighborhood">Bairro:</label>
+                    <input type="text" id="neighborhood" name="neighborhood" placeholder="Bairro" required>
+                    
+                    <label for="city">Cidade:</label>
+                    <input type="text" id="city" name="city" placeholder="Cidade" required>
+                    
+                    <label for="state">Estado:</label>
+                    <input type="text" id="state" name="state" placeholder="Estado" required>
+                </fieldset>
+        
+                <button type="submit" class="submit-btn">Enviar meus dados</button>
+            </form>
+        </main>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.side-menu');
+        menu.classList.toggle('show');
+                    }
+    </script>
+
+<script>
+    function fetchAddress() {
+        const cep = document.getElementById('cep').value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    
+        if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.erro) {
+                        // Preenche os campos com os dados retornados
+                        document.getElementById('address').value = data.logradouro;
+                        document.getElementById('neighborhood').value = data.bairro;
+                        document.getElementById('city').value = data.localidade;
+                        document.getElementById('state').value = data.uf;
+                    } else {
+                        alert('CEP não encontrado!');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Erro ao buscar o endereço.');
+                });
+        } else {
+            alert('CEP inválido. Por favor, digite um CEP válido.');
+        }
+    }
+    </script>
+    
+                    
+</body>
+</html>

@@ -18,6 +18,53 @@ body {
     margin-top: 13px; 
 } 
 
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 10px; 
+    padding-top: 0;
+}
+
+h3 {
+    text-align: center;
+    font-size: 17px;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.informacoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.categoria {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 300px;
+}
+
+.categoria h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #262626;
+}
+
+.categoria ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.categoria ul li {
+    margin-bottom: 8px;
+}
+
 .container { 
     max-width: 100%; 
     box-sizing: border-box; 
