@@ -1,100 +1,181 @@
-/* Estilo Global para Inputs, Selects e Textareas */
-input, select, textarea {
-    display: block; 
-    width: 80%; 
-    margin: 10px auto; 
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+body { 
+    color: black; 
+    background-color: #f2f5f7; 
+    font-family: Arial, Helvetica, sans-serif; 
+} 
 
-main {
-    display: flex; /* Ativa o flexbox */
-    flex-direction: column; /* Organiza os filhos em coluna */
-    align-items: center; /* Centraliza horizontalmente os filhos */
-}
+.logo { 
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%);  
+    z-index: 1; 
+} 
 
-/* Estilo do Título */
+.logo img { 
+    width: 50px;  
+    height: auto;  
+    margin-top: 13px; 
+} 
+
 h1 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
-    margin-top: 10px; 
+    margin-top: -10px; 
     padding-top: 0;
 }
 
-/* Estilo do Formulário de Pedido */
-.pedido-form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Largura máxima do formulário */
-    width: 100%; /* Ajusta a largura para preencher a área disponível */
-    margin: 20px auto; /* Centraliza o formulário e adiciona margem vertical */
-}
-
-/* Estilo para Fieldset */
-fieldset {
-    border: 1px solid #ddd;
+.produto img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.box {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px; 
+    margin: 20px auto; 
+    max-width: 300px; 
 }
 
-/* Estilo do Título do Fieldset */
-legend {
-    font-weight: bold;
-    color: #555;
-    padding: 0 10px;
-}
-
-/* Estilo para Labels */
-label {
-    display: block;
-    font-weight: bold;
-    color: #555;
+.envio p {
+    margin-bottom: 3px; 
+    text-align: center;
     margin-top: 10px;
 }
 
-/* Estilo para o Botão de Envio */
-.submit-btn {
-    display: block;
-    width: 50%;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #ffa5aa; /* Cor do botão */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.envio img {
+    width: 55%;
+    max-width: 300px; 
+    height: auto; 
+    margin-top: none; 
+}
+
+.botao {
+    display: inline-block;
+    background-color: #ff8086; 
+    color: white; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    text-decoration: none;
+    margin-top: 20px; 
     font-weight: bold;
-    text-align: center;
+    transition: background-color 0.3s;
 }
 
-.submit-btn:hover {
-    background-color: #ff8a92; /* Cor do botão ao passar o mouse */
+.botao:hover {
+    background-color: #ffa5aa;
 }
 
-/* Estilo para a Exibição das Imagens */
-.color-swatch {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    margin-bottom: 10px; /* Espaçamento abaixo do color-swatch */
-}
+.container { 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
+} 
 
-.color-swatch img {
-    margin-right: 10px; /* Espaço entre a imagem e o texto */
-    border: 20px solid #ddd; /* Borda ao redor da imagem */
-    border-radius: 4px; /* Cantos arredondados */
-}
+footer img { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 80px; 
+} 
 
-/* Mensagem para Limite de Imagens */
-p {
-    font-size: 0.9em; /* Tamanho do texto das mensagens */
-    color: #777; /* Cor do texto das mensagens */
-}
+footer { 
+    display: flex; 
+    justify-content: center; 
+} 
 
+footer a { 
+    margin: 30px; 
+    text-align: center; 
+} 
+
+.navbar { 
+    display: flex; 
+    justify-content: flex-start; 
+    padding: 12px; 
+} 
+
+.menu-btn { 
+    background-color: transparent; 
+    border: none;  
+    cursor: pointer; 
+    padding: 10px;  
+    display: flex;  
+    flex-direction: column; 
+    justify-content: space-around;  
+    width: 40px;  
+    height: 40px;  
+    transition: transform 0.3s; 
+} 
+
+.side-menu { 
+    position: fixed; 
+    top: 0; 
+    right: -300px;  
+    width: 250px; 
+    height: 100%;  
+    background-color: #ffa5aa; 
+    padding: 20px; 
+    transition: right 0.3s;  
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); 
+    z-index: 1000;  
+} 
+
+.menu-btn:hover { 
+    transform: scale(1.1); 
+} 
+
+.bar { 
+    width: 30px; 
+    height: 4px; 
+    background-color: #ffa5aa;  
+    border-radius: 2px;  
+    transition: all 0.3s; 
+} 
+
+.close-btn { 
+    background: none; 
+    border: none; 
+    font-size: 30px; 
+    color: white; 
+    cursor: pointer; 
+    margin-bottom: 20px;  
+} 
+
+.side-menu.show { 
+    right: 0; 
+} 
+
+.menu-options ul { 
+    list-style-type: none; 
+    padding: 0; 
+} 
+
+.menu-options ul li { 
+    margin: 10px 0; 
+} 
+
+.menu-options ul li a { 
+    color: white;  
+    text-decoration: none;  
+    transition: color 0.3s;  
+} 
+
+.menu-options ul li a:hover { 
+    color: #ffcccb; 
+} 
+
+@media (max-width: 768px) { 
+    .navbar { 
+        flex-direction: column;  
+        align-items: flex-end;  
+    } 
+
+    .menu-options { 
+        padding: 20px;  
+    } 
+} 
